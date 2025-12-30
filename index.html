@@ -10,15 +10,14 @@
     href="style.css">
 </head>
 <body>
-    <body>
         <div style="
         position: sticky;
         top: 0;
-        background-color: rgb(0, 0, 0);
+        background-color: rgba(93, 116, 231, 0.476);
         color: rgb(29, 84, 194);
         padding: 10px;
         text-align: center;
-        box-shadow: 0 2px 5px rgb(30, 96, 228);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.467);
         z-index: 1000;
         margin-bottom: 20px;">
             <h1 style="font-family: 'Bebas Neue', sans-serif;
@@ -28,38 +27,70 @@
             color: white;">
                 ♿️Access Point DFW
             </h1>
+            <div class="search container">
+                <input type="text" placeholder="Search city, area, or venue" class="main-search">
+            </div>
         </div>  
-    <h1>
-        Explore Dallas - Fort Worth
-    </h1>
-        <h1 style="margin-top: 20px; font-size: 100%;">
-            Venues
-        </h1>
+        <div class="map-viewport">
+            <div class="map-canvas" id="map">
+                <a href="addison.html"
+                class="map-node" style="
+                top: 300px;
+                left: 400px;"
+                >Addison</a>
+                <a href="frisco.html"
+                class="map-node" style="
+                top: 150px;
+                left: 420px;">
+                Frisco</a>
+                <a href="downtowndallas.html"
+                class="map-node" style="
+                top: 500px;
+                left: 410px;"
+                >Downtown Dallas</a>
+            </div>
+        </div>
         <input type="text"
-        placeholder="Search for a venue" style="width: 80%; padding: 12px 20px; border-radius: 12px; border: 1px solid#ddd; margin-bottom: 30px; font-size: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-        <p><strong>Explore Areas:</strong></p>
+        placeholder="Search city, area, or venue" style="width: 80%; padding: 12px 20px; border-radius: 12px; border: 1px solid#ddd; margin-bottom: 30px; font-size: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <p><strong>Explore Cities:</strong></p>
         <div class="map-container">
             <div class="map-grid">
                 <div class="spacer"></div>
-                <a href="frisco.html" class="map-btn">
-                    Frisco
+                <a href="irving.html" class="city-link">
+                    Irving
                 </a>
-                <a href="carrollton.html" class="map-btn">
+                <a href="carrollton.html" class="city-link">
                     Carrollton
                 </a>
-                <a href="plano.html" class="map-btn">
+                <a href="plano.html" class="city-link">
                     Plano
                 </a>
-                <a href="richardson.html" class="map-btn">
-                    Richardson
+                <a href="fortworth.html" class="city-link">
+                    Forth Worth
                 </a>
-                <div class="spacer"></div>
-                <a href="addison.html" class="map-btn highlighted">
-                    ADDISON
+                <a href="addison.html" class="city-link">
+                    Addison
                 </a>
-                <div class="spacer"></div>
-                <a href="dallas.html" class="map-btn">
-                    Dallas
+                <a href="arlington.html" class="city-link">
+                    Arlington
+                </a>
+                <a href="downtowndallas.html" class="city-link">
+                    Downtown Dallas
+                </a>
+                <a href="northrichlandhills.html" class="city-link">
+                    North Richland Hills
+                </a>
+                <a href="frisco.html" class="city-link">
+                    Frisco
+                </a>
+                <a href="flowermound.html" class="city-link">
+                    Flower Mound
+                </a>
+                <a href="grapevine.html" class="city-link">
+                    Grapevine
+                </a>
+                <a href="mckinney.html" class="city-link">
+                    McKinney
                 </a>
                 <div class="spacer"></div>
             </div>

@@ -8,3 +8,81 @@ body {
     letter-spacing: -0.02em;
     color: black;
 }
+
+.map-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(80px, auto);
+    gap: 10px;
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgb(206, 212, 229);
+    border-radius: 15px;
+}
+.city-link {
+    background: white;
+    border: 2px solid rgb(51, 92, 206);
+    padding: 20px 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.city-link.highlighted {
+    background: #2D5AF7;
+    color: white;
+}
+.spacer {
+    visibility: hidden;
+}
+.map-viewport {
+    width: 100%;
+    height: 70vh;
+    overflow: scroll;
+    border: 2px solid rgb(206, 212, 229);
+    background: #eef2f7;
+    border-radius: 15px;
+    cursor: grab;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+.map-canvas {
+    width:1200px;
+    height: 1200px;
+    background-image: url('dfw-outline.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.map-node {
+    position: absolute;
+    padding: 10px 15px;
+    background: white;
+    border: 2px solid rgb(51, 92, 206);
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(51, 92, 206);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.alphabet-ribbon {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    background: rgb(231, 234, 243);
+    gap: 15px;
+}
+.ribbon-item {
+    color: white;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
