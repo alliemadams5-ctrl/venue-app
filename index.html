@@ -13,31 +13,10 @@
     <div class="search-container">
         <input type="text" placeholder="Search city..." class="main-search">
     </div>
-        <div style="
-        position: sticky;
-        top: 0;
-        background-color: rgba(93, 116, 231, 0.476);
-        color: rgb(29, 84, 194);
-        padding: 10px;
-        text-align: center;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.467);
-        z-index: 1000;
-        margin-bottom: 20px;">
-            <h1 style="font-family: 'Bebas Neue', sans-serif;
-            font-size: 36px;
-            letter-spacing: -0.02em;
-            margin: 0;
-            color: white;">
-                ♿️Access Point DFW
-            </h1>
-            <div class="search container">
-                <input type="text" placeholder="Search city, area, or venue" class="main-search">
-            </div>
-        </div>  
-        <div class="map-viewport">
+    <div class="map-viewport" id="viewport">
             <div class="map-canvas" id="map">
                 <a href="addison.html"
-                class="map-node" style="
+                class="map-node active-node" id="addison-node" style="
                 top: 400px;
                 left: 500px;"
                 >Addison</a>
@@ -62,7 +41,7 @@
                 left: 200px;"
                 >Fort Worth</a>
             </div>
-        </div>
+    </div>
 <div class="alphabet-ribbon">
     <a href="addison.html" class="ribbon-item">
         Addison
@@ -115,10 +94,19 @@
             cursor: pointer;"> ⚠️
         </div>
     <script>
-        window.onload=function() {const viewport=document.getElementById('viewport');
-            const addison=document.getElementById('addison-node');
-            viewport.scrollLeft=addison.offsetLeft-(viewport.clientWidth/2);
-            viewport.scrollTop=addison.offsetTop-(viewport.clientHeight/2);};
+        window.onload=function() {
+            var myWindow=document.getElementById('viewport');
+            var myTarget=document.getElementById('addison-node');
+            setTimeout(() => {
+                if (myWindow && myTarget) {
+            var x=myTarget.offsetLeft-(myWindow.clientWidth/2) +
+            (myTarget.clientWidth/2);
+            var y=myTarget.offsetTop-(myWindow.clientHeight/2)+(myTarget.clientHeight/2);
+            myWindow.scrollLeft=x;
+            myWindow.scrollTop=y;
+        }
+    }, 100);
+};
     </script>
     </body>
 </html>
